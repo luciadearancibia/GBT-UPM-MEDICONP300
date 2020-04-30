@@ -28,6 +28,9 @@ During testing, the code calculated the likelihood of the presence of a P300 sig
 
 ## Contents
 
+**Trained models**
+the folder ```trainedModels```contains, for each of the 15 subjects of the dataset, LDA (```modelLDA.mat```) and SVM (```modelSVM.mat```) classifiers trained with the calibration data of all of sessions (1 to 7), as well as the parameters for feature extraction (```ft_extraction_params.mat```). These parameters include the indexes for the selection of relevant wavelett coefficients according to the t-CWT performed during training, and the tansformation matrix for PCA.
+
 **Main files to execute:**
 
 ```allSubjects_phII.m``` Executes a classification algorithm (LDA or SVM) on all subjects and sessions of phase II and saves the predictions of target object using the chosen algorithm. 
@@ -37,6 +40,8 @@ During testing, the code calculated the likelihood of the presence of a P300 sig
 ```trainSVM_within_sbj.m```     Function to train a linear or radial SVM within-subject classifier on labeled data for a chosen subject. The sessions used to train the model as well as the specific SVM model to use must be specified inside the function.
 
 **Secundary functions:**
+
+```extractFeatures_train.n``` and ```extractFeatures_test.m``` are the functions that perform feature extraction from the EEGs of the specified subject and sessions during training and testing.
 
 ```synchrAv_session.m``` Function for averaging EEG events corresponding to the same object in the same block.
 
