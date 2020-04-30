@@ -30,7 +30,7 @@ During testing, the code calculated the likelihood of the presence of a P300 sig
 
 **Main files to execute:**
 
-```allSubjects_phI.m``` Executes a classification algorithm (LDA or SVM) on all subjects and sessions of phase II and saves the predictions of target object using the chosen algorithm. 
+```allSubjects_phII.m``` Executes a classification algorithm (LDA or SVM) on all subjects and sessions of phase II and saves the predictions of target object using the chosen algorithm. 
                               
 ```trainDA_within_sbj.m```      Function to train an LDA within-subject classifier on labeled data for a chosen subject. The sessions used to train the model must be specified inside the function.
 
